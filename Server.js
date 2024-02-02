@@ -17,12 +17,14 @@ app.use('/auth', authrouter);
 
 
 // Handle the route
+// This One For FileUpload}
 const router = require('./Router/NoteRouter')
 const AuthMiddleware = require('./MiddleWare/Authorize')
 app.use('/api', AuthMiddleware, router);
 
 
  
+
 
 const PORT = keys.PORT;
 const { ConnectDB } = require("./ConnecttoMongoDB/Connection")
