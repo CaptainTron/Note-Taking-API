@@ -5,10 +5,11 @@ const { v4: uuidv4 } = require('uuid');
 const keys = require("../config/keys");
 
 const s3 = new AWS.S3({
+    apiVersion: "2006-03-01",
     accessKeyId: keys.accessKeyId,
     secretAccessKey: keys.secretaccessKey,
-    signatureVersion: 'v4',
-    region: 'ap-south-1'
+    region: 'ap-south-1',
+    signatureVersion:'v4'
 })
 
 

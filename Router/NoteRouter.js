@@ -13,7 +13,7 @@ router.patch('/updatenote', ClearHashKey, UpdateNote);
 
 
 // UploadfileRoute Goes Here
-router.post('/uploadfile', UploadFiles3)
+router.get('/uploadfile', UploadFiles3)
 
 
 module.exports = router
