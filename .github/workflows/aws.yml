@@ -25,7 +25,7 @@ jobs:
             mkdir -p /home/ubuntu/githubCICD
             cd /home/ubuntu/githubCICD
             sudo apt update
-            'rm -rf .git .github .gitignore * && git clone -b main https://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@github.com/CaptainTron/IG_Automation_Bot.git .' 
+            rm -rf .git .github .gitignore * && git clone -b main https://${{ secrets.TOKEN }}@github.com/CaptainTron/IG_Automation_Bot.git .
             pip install -r requirement.txt
             chmod +x automate.sh
             date
