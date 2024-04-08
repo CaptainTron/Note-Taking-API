@@ -22,5 +22,5 @@ jobs:
           username: ubuntu
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            mkdir /home/ubunut/vaibhav
+            mkdir /home/ubuntu/vaibhav
             # Add any additional deployment steps here
