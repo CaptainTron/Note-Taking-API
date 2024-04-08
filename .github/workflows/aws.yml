@@ -22,5 +22,22 @@ jobs:
           username: ubuntu
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            mkdir /home/ubuntu/shubham
-            # Add any additional deployment steps here
+            mkdir -p /home/ubuntu/githubCICD
+            cd /home/ubuntu/githubCICD
+            sudo apt update
+            rm -rf .git .github .gitignore * && git clone -b main https://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@github.com/CaptainTron/IG_Automation_Bot.git . 
+            pip install -r requirement.txt
+            chmod +x automate.sh
+            date
+            if ! command -v ngrok &> /dev/null; then
+            echo "ngrok is not installed. Installing..."
+            # Download and install ngrok
+            curl -s https://ngrok-agent.s3.amazonaws.com/ngrok.asc \
+            | sudo tee /etc/apt/trusted.gpg.d/ngrok.asc >/dev/null && echo "deb https://ngrok-agent.s3.amazonaws.com buster main" \
+            | sudo tee /etc/apt/sources.list.d/ngrok.list && sudo apt update && sudo apt install ngrok
+            
+            echo "Adding your authtoken to the default ngrok.yml"
+            ngrok config add-authtoken 2dNF1VLg5bFPHtESIyKtSO2xqAI_4e4mjYsxDjoXtxo1Qskzf
+            else
+              echo "ngrok is already installed."
+            fi
