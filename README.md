@@ -1,15 +1,17 @@
 # Note-Taking API
-A Express server that allows to perform CRUD operations on notes through various endpoints. The server offers several features to enhance efficiency, scalability, and security. Here's a breakdown of the key components:
+A powerful Express server that allows you to perform CRUD operations on notes through various endpoints. This server offers a range of features to enhance efficiency, scalability, and security. Here's a breakdown of the key components:
 
 ## Features
-- Redis integration: Efficient note storage and retrieval.
-- Docker support: Easy server deployment.
-- Cluster module: Improved scalability.
-- AWS S3 integration: Secure media storage with presigned URLs.
-- MongoDB as the database.
+- Secure endpoints with JWT tokens for authentication.
+- Redis integration for efficient note storage and retrieval.
+- Docker support for easy server deployment.
+- Cluster module for improved scalability.
+- AWS S3 integration for secure media storage with presigned URLs.
+- MongoDB as the database for data persistence.
 
 ## Directory Structure
 The project follows a specific directory structure, which includes the following key directories and files:
+
 ```
 .
 ├── ConnecttoMongoDB
