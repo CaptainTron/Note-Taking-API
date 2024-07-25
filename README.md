@@ -1,5 +1,5 @@
 # Note-Taking API
-A powerful Express server that allows you to perform CRUD operations on notes through various endpoints. This server offers a range of features to enhance efficiency, scalability, and security. Here's a breakdown of the key components:
+A powerful Express server that allows to perform CRUD operations on notes through various endpoints. This server offers a range of features to enhance efficiency, scalability, and security. Here's a breakdown of the key components:
 
 ## Features
 - Secure endpoints with JWT tokens for authentication.
