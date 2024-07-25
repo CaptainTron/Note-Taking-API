@@ -1,5 +1,5 @@
 # Note-Taking API
-A Express server that allows you to perform CRUD operations on notes through various endpoints. The server offers several features to enhance efficiency, scalability, and security. Here's a breakdown of the key components:
+A Express server that allows to perform CRUD operations on notes through various endpoints. The server offers several features to enhance efficiency, scalability, and security. Here's a breakdown of the key components:
 
 ## Features
 - Redis integration: Efficient note storage and retrieval.
