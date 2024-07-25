@@ -1,13 +1,56 @@
-# Note-Taking-API
-This is Express Server to Create, Retrieve, Delete, and Update the Notes. You can use this API by simply cloning this repo and Setting the following Environment variable
-- ```PORT```
-- ```MONGOURL```
-- ```JWT_EXPIRES_IN```
-- ```JWT_SECRET_KEY```
-### Features 
-- This Server has Redis for frequent notes
-- You can run this server using Docker.
-- Cluster module, for scaleability.
-- AWS S3, presigned url for media storage.
- 
-For More information about how to use this API, refer to Postman Documentation [Click Here](https://documenter.getpostman.com/view/24259607/2s9YsFDZ5F)
+# Note-Taking API
+A Express server that allows you to perform CRUD operations on notes through various endpoints. The server offers several features to enhance efficiency, scalability, and security. Here's a breakdown of the key components:
+
+## Features
+- Redis integration: Efficient note storage and retrieval.
+- Docker support: Easy server deployment.
+- Cluster module: Improved scalability.
+- AWS S3 integration: Secure media storage with presigned URLs.
+- MongoDB as the database.
+
+## Directory Structure
+The project follows a specific directory structure, which includes the following key directories and files:
+```
+.
+├── ConnecttoMongoDB
+│   └── Connection.js
+├── Controller
+│   ├── Note_Controller.js
+│   └── UserAuthentication_Controller.js
+├── Dockerfile
+├── MiddleWare
+│   ├── Authorize.js
+│   └── ClearCache.js
+├── README.md
+├── Router
+│   ├── AuthRouter.js
+│   └── NoteRouter.js
+├── Schema
+│   ├── Schema.js
+│   └── Username_Password.js
+├── Server.js
+├── Services
+│   ├── cache.js
+│   └── uploads2S3.js
+├── config
+│   ├── ci.js
+│   ├── dev.js
+│   └── keys.js
+├── package-lock.json
+├── package.json
+└── tests
+    └── server.test.js
+```
+
+## Usage Instructions
+To use this API, follow these steps:
+
+1. Clone the repository to your local machine.
+2. Set the following environment variables:
+    - `PORT`: The port number for the server.
+    - `MONGOURL`: The MongoDB connection URL.
+    - `JWT_EXPIRES_IN`: The expiration time for JSON Web Tokens (JWT).
+    - `JWT_SECRET_KEY`: The secret key for JWT encryption.
+
+For detailed information on how to use this API, please refer to the [Postman Documentation](https://documenter.getpostman.com/view/24259607/2s9YsFDZ5F).
+
